@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>약시계 — 개인정보 처리방침</title>
+  <style>
+    :root {
+      --primary: #4CAF8C;
+      --bg: #f9fafb;
+      --text: #1a1a2e;
+      --muted: #6b7280;
+      --border: #e5e7eb;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      padding: 0 16px;
+    }
+    header {
+      background: var(--primary);
+      color: #fff;
+      padding: 40px 24px 32px;
+      margin: 0 -16px 32px;
+    }
+    header h1 { font-size: 22px; font-weight: 700; margin-bottom: 6px; }
+    header p { font-size: 13px; opacity: .85; }
+    .container { max-width: 680px; margin: 0 auto; padding-bottom: 64px; }
+    h2 {
+      font-size: 16px; font-weight: 700;
+      color: var(--primary);
+      margin: 28px 0 10px;
+      padding-bottom: 4px;
+      border-bottom: 2px solid var(--primary);
+    }
+    p, li { font-size: 14.5px; color: var(--text); margin-bottom: 8px; }
+    ul { padding-left: 20px; margin-bottom: 12px; }
+    li { margin-bottom: 4px; }
+    .tag {
+      display: inline-block;
+      background: #e8f5e9;
+      color: var(--primary);
+      font-size: 12px;
+      font-weight: 600;
+      padding: 2px 10px;
+      border-radius: 20px;
+      margin-bottom: 14px;
+    }
+    .highlight-box {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--primary);
+      border-radius: 8px;
+      padding: 14px 16px;
+      margin: 12px 0 20px;
+    }
+    .highlight-box p { margin: 0; font-size: 13.5px; }
+    footer {
+      text-align: center;
+      font-size: 12px;
+      color: var(--muted);
+      padding: 24px 0;
+      border-top: 1px solid var(--border);
+      margin-top: 40px;
+    }
+    a { color: var(--primary); text-decoration: none; }
+  </style>
+</head>
+<body>
+<header>
+  <div class="container">
+    <h1>개인정보 처리방침</h1>
+    <p>약시계 (YakSigye) · 최종 수정: 2026년 5월</p>
+  </div>
+</header>
+
+<div class="container">
+  <span class="tag">간단 요약</span>
+  <div class="highlight-box">
+    <p>약시계는 이메일, 전화번호, 이름 등 어떠한 개인 식별 정보도 수집하지 않습니다. Firebase 익명 인증을 사용하여 계정 없이 이용할 수 있습니다.</p>
+  </div>
+
+  <h2>1. 수집하는 정보</h2>
+  <p>약시계는 다음 정보를 수집합니다:</p>
+  <ul>
+    <li><strong>익명 식별자</strong>: Firebase Anonymous Authentication이 생성하는 랜덤 UID (이름, 이메일, 전화번호 없음)</li>
+    <li><strong>복약 기록</strong>: 사용자가 직접 입력한 약 이름, 복약 시간, 복약 인증 로그 (기기 내 및 Firestore 저장)</li>
+    <li><strong>페어링 코드</strong>: 자녀-부모 연결에 사용되는 6자리 임시 코드 (사용 후 즉시 삭제)</li>
+    <li><strong>FCM 토큰</strong>: 복약 알림 발송에 필요한 Firebase Cloud Messaging 기기 토큰 (개인 식별 불가)</li>
+  </ul>
+  <p>수집하지 않는 정보: 이름, 이메일, 전화번호, 위치, 연락처, 사진, 카메라, 마이크</p>
+
+  <h2>2. 정보 이용 목적</h2>
+  <ul>
+    <li>복약 일정 알림 발송 (TTS 음성 + push notification)</li>
+    <li>자녀-부모 앱 간 복약 상태 동기화</li>
+    <li>복약 이력 조회 (캘린더 / 달성률)</li>
+    <li>케어플러스 구독 상태 확인</li>
+  </ul>
+
+  <h2>3. 제3자 제공</h2>
+  <p>수집된 정보는 제3자에게 판매·임대·공유하지 않습니다. 다음 서비스와 기술적으로 연동됩니다:</p>
+  <ul>
+    <li><strong>Google Firebase</strong> (Firestore, Authentication, Cloud Messaging) — Google 개인정보처리방침 적용</li>
+    <li><strong>Apple App Store / Google Play Billing</strong> — 구독 결제 처리 (구독 시)</li>
+  </ul>
+
+  <h2>4. 데이터 보관 및 삭제</h2>
+  <ul>
+    <li>무료 플랜: 복약 이력 최근 30일 자동 삭제</li>
+    <li>케어플러스: 복약 이력 최근 1년 보관</li>
+    <li>앱 삭제 시 기기 내 데이터 즉시 삭제. Firestore 데이터는 앱 내 '데이터 삭제' 기능 또는 이메일 요청으로 삭제 가능</li>
+  </ul>
+
+  <h2>5. 어린이 개인정보 (COPPA / GDPR-K)</h2>
+  <p>약시계는 13세 미만 아동을 대상으로 하지 않습니다. 13세 미만 사용자의 개인정보를 의도적으로 수집하지 않습니다. 13세 미만 어린이가 데이터를 제공한 것을 인지하는 경우 즉시 삭제 조치합니다.</p>
+
+  <h2>6. 보안</h2>
+  <p>모든 서버 통신은 TLS 암호화를 사용합니다. Firebase Security Rules를 통해 본인의 데이터에만 접근 가능하도록 제한합니다.</p>
+
+  <h2>7. 방침 변경</h2>
+  <p>개인정보 처리방침이 변경될 경우 앱 내 알림 또는 본 페이지를 통해 사전 안내합니다. 중요한 변경 시에는 앱 업데이트 시 재동의를 요청합니다.</p>
+
+  <h2>8. 문의</h2>
+  <p>개인정보 관련 문의 및 삭제 요청:</p>
+  <ul>
+    <li>이메일: <a href="mailto:dorisurararara@gmail.com">dorisurararara@gmail.com</a></li>
+    <li>운영자: 조승현 (Seunghyeon Cho)</li>
+  </ul>
+</div>
+
+<footer>
+  <div class="container">
+    © 2026 약시계 (YakSigye) · <a href="/support">고객지원</a> · <a href="/privacy">개인정보처리방침</a>
+  </div>
+</footer>
+</body>
+</html>
