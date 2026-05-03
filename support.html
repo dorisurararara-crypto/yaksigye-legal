@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>약시계 — 고객지원</title>
+  <style>
+    :root {
+      --primary: #4CAF8C;
+      --bg: #f9fafb;
+      --text: #1a1a2e;
+      --muted: #6b7280;
+      --border: #e5e7eb;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      padding: 0 16px;
+    }
+    header {
+      background: var(--primary);
+      color: #fff;
+      padding: 40px 24px 32px;
+      margin: 0 -16px 32px;
+    }
+    header h1 { font-size: 22px; font-weight: 700; margin-bottom: 6px; }
+    header p { font-size: 13px; opacity: .85; }
+    .container { max-width: 680px; margin: 0 auto; padding-bottom: 64px; }
+    h2 {
+      font-size: 16px; font-weight: 700;
+      color: var(--primary);
+      margin: 28px 0 10px;
+      padding-bottom: 4px;
+      border-bottom: 2px solid var(--primary);
+    }
+    h3 { font-size: 14.5px; font-weight: 700; margin: 18px 0 6px; }
+    p, li { font-size: 14.5px; color: var(--text); margin-bottom: 8px; }
+    ul { padding-left: 20px; margin-bottom: 12px; }
+    li { margin-bottom: 4px; }
+    .card {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 20px;
+      margin: 12px 0;
+    }
+    .card h3 { margin-top: 0; color: var(--primary); }
+    .contact-btn {
+      display: inline-block;
+      background: var(--primary);
+      color: #fff;
+      padding: 12px 28px;
+      border-radius: 10px;
+      font-size: 15px;
+      font-weight: 600;
+      text-decoration: none;
+      margin-top: 16px;
+    }
+    .badge {
+      display: inline-block;
+      background: #e8f5e9;
+      color: var(--primary);
+      font-size: 11px;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 4px;
+      margin-left: 6px;
+      vertical-align: middle;
+    }
+    footer {
+      text-align: center;
+      font-size: 12px;
+      color: var(--muted);
+      padding: 24px 0;
+      border-top: 1px solid var(--border);
+      margin-top: 40px;
+    }
+    a { color: var(--primary); text-decoration: none; }
+  </style>
+</head>
+<body>
+<header>
+  <div class="container">
+    <h1>고객지원</h1>
+    <p>약시계 (YakSigye) — 부모님 복약을 자녀가 1탭으로 확인</p>
+  </div>
+</header>
+
+<div class="container">
+
+  <h2>자주 묻는 질문</h2>
+
+  <div class="card">
+    <h3>앱에 가입이 필요한가요?</h3>
+    <p>아니요. 약시계는 이메일·비밀번호 없이 Firebase 익명 로그인으로 자동 시작됩니다. 별도 계정 생성이 필요 없습니다.</p>
+  </div>
+
+  <div class="card">
+    <h3>자녀 앱과 부모 앱을 어떻게 연결하나요?</h3>
+    <p>1. 자녀 앱 → '가족 추가' → 6자리 페어링 코드 확인<br>
+    2. 부모 앱 → '자녀와 연결' → 6자리 코드 입력<br>
+    연결은 1회만 하면 되고, 이후 자동 동기화됩니다.</p>
+  </div>
+
+  <div class="card">
+    <h3>복약 알림이 오지 않아요</h3>
+    <p>다음을 확인해 주세요:</p>
+    <ul>
+      <li>기기 설정 → 약시계 → 알림 허용 여부</li>
+      <li>방해금지 모드(집중 모드) 해제 여부</li>
+      <li>앱이 백그라운드에서 완전 종료되지 않았는지</li>
+    </ul>
+    <p>iOS: 설정 → 약시계 → 알림 → '허용' 켜기</p>
+  </div>
+
+  <div class="card">
+    <h3>케어플러스 구독을 해지하려면?</h3>
+    <p><strong>iOS (App Store)</strong>: 설정 → Apple ID → 구독 → 약시계 케어플러스 → 구독 취소<br>
+    <strong>Android (Google Play)</strong>: Play Store → 내 구독 → 약시계 → 구독 취소</p>
+    <p>갱신 3일 전(iOS) / 1일 전(Android) 전에 취소하시면 다음 결제 발생 없이 해지됩니다.</p>
+  </div>
+
+  <div class="card">
+    <h3>내 데이터를 삭제하고 싶어요</h3>
+    <p>앱 내 설정 → '데이터 삭제' 버튼을 이용하거나, 아래 이메일로 요청해 주세요. 7일 이내 모든 Firestore 데이터를 삭제해 드립니다.</p>
+  </div>
+
+  <div class="card">
+    <h3>TTS 음성이 작동하지 않아요</h3>
+    <p>기기 볼륨 및 무음 모드 해제 여부를 확인해 주세요. iOS의 경우 사이드 스위치(무음 스위치) 및 볼륨 설정을 확인하세요. 앱 재시작 후에도 문제가 지속되면 이메일로 문의해 주세요.</p>
+  </div>
+
+  <h2>문의하기</h2>
+  <p>위 FAQ로 해결되지 않으면 이메일로 연락 주세요. 보통 1-2 영업일 내 답변 드립니다.</p>
+  <a href="mailto:dorisurararara@gmail.com" class="contact-btn">이메일 문의</a>
+
+  <h2>앱 버전 및 호환성</h2>
+  <ul>
+    <li>최소 iOS 버전: iOS 16.0 이상</li>
+    <li>최소 Android 버전: Android 9.0 (API 28) 이상</li>
+    <li>두 기기(자녀폰 + 부모폰) 모두 인터넷 연결 필요</li>
+  </ul>
+
+  <h2>개발자 정보</h2>
+  <ul>
+    <li>운영자: 조승현 (Seunghyeon Cho)</li>
+    <li>이메일: <a href="mailto:dorisurararara@gmail.com">dorisurararara@gmail.com</a></li>
+    <li>앱 정책: <a href="/privacy">개인정보 처리방침</a></li>
+  </ul>
+
+</div>
+
+<footer>
+  <div class="container">
+    © 2026 약시계 (YakSigye) · <a href="/support">고객지원</a> · <a href="/privacy">개인정보처리방침</a>
+  </div>
+</footer>
+</body>
+</html>
